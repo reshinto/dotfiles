@@ -82,5 +82,5 @@ colorscheme molokai
 
 
 " redirect back to original path after reconnecting external SSD
-" can be call in the vim terminal via :Reset
+" can be called in the vim terminal via :Reset
 command! Reset cd | cd %:h
