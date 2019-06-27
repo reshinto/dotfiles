@@ -45,21 +45,28 @@ let g:ale_linters = {
 " Prettier config file
 " --tab-wdith <int>: Change default indentation from 2 to 4 for Javascript
 " --no-bracket-spacing: Remove default spacing between brackets
-let g:ale_javascript_prettier_options = '--tab-width 4 --no-bracket-spacing'
+let g:ale_javascript_prettier_options = '--tab-width 2 --no-bracket-spacing'
 " let g:ale_css_stylelint_options = '--indentation 4'
 
 
 " NERD Tree settings
 " Close NERD Tree after opening a file
 let NERDTreeQuitOnOpen = 1
-" Show hidden files
-let NERDTreeShowHidden = 1
+" hide hidden files, default is 0, change to 1 to show
+let NERDTreeShowHidden = 0
 " Open and close menu with leader + n
 nmap <Leader>n :NERDTreeToggle<CR>
 
 
 " Remove default left padding
 set foldcolumn=0
+
+" Prevents JS from auto folding
+au FileType javascript setlocal nofoldenable
+" Prevents markdown from auto folding
+au FileType markdown setlocal nofoldenable
+
+
 
 " Set column limit to 80 for python and javascript
 " Set color column for python & javascript if exceed limit, display when exceeded at 81
@@ -82,5 +89,24 @@ colorscheme molokai
 
 
 " redirect back to original path after reconnecting external SSD
-" can be called in the vim terminal via :Reset
+" can be call in the vim terminal via :Reset
 command! Reset cd | cd %:h
+
+
+" Indentation settings
+" Only do this part when compiled with support for autocommands.
+if has("autocmd")
+    " Use filetype detection and file-based automatic indenting.
+    filetype plugin indent on
+
+    " Use actual tab chars in Makefiles.
+    autocmd FileType python set tabstop=4 shiftwidth=4 softtabstop=0 expandtab
+endif
+" For everything else, use a tab width of 2 space chars.
+set tabstop=2       " The width of a TAB is set to 2.
+                    " Still it is a \t. It is just that
+                    " Vim will interpret it to be having
+                    " a width of 2.
+set shiftwidth=2    " Indents will have a width of 2.
+set softtabstop=0   " Sets the number of columns for a TAB.
+set expandtab       " Expand TABs to spaces.
