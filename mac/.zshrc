@@ -4,6 +4,9 @@ neofetch
 # If you come from bash you might have to change your $PATH.
 #export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Anaconda path
+export PATH="/usr/local/anaconda3/bin:$PATH"
+
 # Mac OS software update path
 export PATH="/usr/sbin/:$PATH"
 
@@ -14,7 +17,6 @@ export PATH="/usr/local/bin:$PATH"
 # port path
 export PATH="/opt/local/bin:$PATH"
 export PATH="/opt/local/sbin:$PATH"
-
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/springfield/.oh-my-zsh"
@@ -122,9 +124,6 @@ alias aur="brew cleanup && brew cleanup -s && conda clean -ay"
 # Java home path
 export JAVA_HOME="`/usr/libexec/java_home -v 10`"
 
-# added by Anaconda3 installer
-export PATH="/Users/springfield/anaconda3/bin:$PATH"
-
 # email and password
 source /Users/springfield/.authentication.sh
 
@@ -135,8 +134,8 @@ alias tor="open -a 'tor browser'"
 alias dev="cd /Volumes/Speed/Dev"
 
 # delete Spam emails
-alias dspam="python /Users/springfield/my_apps/delete-spam-automation/run.py"
-alias pspam="python /Users/springfield/my_apps/delete-spam-automation/run.py manual"
+alias dspam="python3 /Users/springfield/my_apps/delete-spam-automation/run.py"
+alias pspam="python3 /Users/springfield/my_apps/delete-spam-automation/run.py manual"
 
 # tensorflow conda env shortcut
 alias tf="source activate tf"
@@ -188,20 +187,20 @@ alias evim='emacs -nw'
 alias cppcompile='c++ -std=c++11 -stdlib=libc++'
 
 # alarm clock
-alias alarm="python /Users/springfield/my_apps/alarm-volume-control/run_app.py"
+alias alarm="python3 /Users/springfield/my_apps/alarm-volume-control/run_app.py"
 
 # flask tutorial secret key and database
 source /Users/springfield/.flaskTutorialTemp.sh
 
 # rename file or folder names
-alias rename="python /Volumes/Speed/Dev/Python_projects/My_Projects/Automation/rename_files/rename_files.py"
+alias rename="python3 /Volumes/Speed/Dev/Python_projects/My_Projects/Automation/rename_files/rename_files.py"
 
 #alias mongod='mongod --dbpath /Users/springfield/data/db'
 
 # control my SG home LG tv
 export PATH="/Volumes/Speed/Dev/Python_projects/My_Projects/inDevelopment/hack_myTv/LGWebOSRemote:$PATH"
 alias atv="sa atv"
-alias tv="python /Volumes/Speed/Dev/Python_projects/My_Projects/inDevelopment/hack_myTv/LGWebOSRemote/lgtv.py"
+alias tv="python3 /Volumes/Speed/Dev/Python_projects/My_Projects/inDevelopment/hack_myTv/LGWebOSRemote/lgtv.py"
 
 # webDev yelp-camp tutorial
 export DATABASEURL="mongodb://localhost:27017/yelp_camp"
@@ -210,7 +209,7 @@ export DATABASEURL="mongodb://localhost:27017/yelp_camp"
 source /Users/springfield/.CLOUDINARYAPI.sh
 
 # github username
-#export githubUser=""
+export githubUser="reshinto"
 
 # python project default path
 export pyProject="/Volumes/Speed/Dev/Python_projects/My_Projects/inDevelopment"
@@ -219,13 +218,16 @@ export pyProject="/Volumes/Speed/Dev/Python_projects/My_Projects/inDevelopment"
 export webProject="/Volumes/Speed/Dev/Web_projects/my_projects"
 
 # create new project automatically
-alias create="python /Users/springfield/my_apps/Automate_Building_projects/run.py"
+alias create="python3 /Users/springfield/my_apps/Automate_Building_projects/run.py"
 
 # reindent file automatically
-alias re="python /Users/springfield/my_apps/Reindent/main.py"
+alias re="python3 /Users/springfield/my_apps/Reindent/main.py"
 
 # run python server
-alias pserver="python -m http.server"
+alias pserver="python3 -m http.server"
 
 # run html server
 alias server="http-server"
+
+# Sudo Update All (include spam deletion)
+alias sua="sudo softwareupdate -i -a && brew update && brew upgrade && brew cleanup && brew cleanup -s && python3 /Users/springfield/my_apps/delete-spam-automation/run.py && npm update -g && pip3 install --upgrade pip && pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U --user && conda install anaconda -y && conda update --all -y && conda clean -ay"
