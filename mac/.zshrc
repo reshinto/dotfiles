@@ -239,3 +239,7 @@ alias mysqlrestart="mysql.server restart"
 alias mysqlstop="mysql.server stop"
 # Change mySQL password
 # mysqladmin -u root password 'yourpassword'
+
+# postgresql
+alias pgstart="brew services start postgresql"
+alias pgstop="brew services stop postgresql"
