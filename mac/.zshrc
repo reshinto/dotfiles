@@ -233,8 +233,7 @@ alias server="http-server"
 alias sua="sudo softwareupdate -i -a && brew update && brew upgrade && brew cleanup && brew cleanup -s && python3 /Users/springfield/my_apps/delete-spam-automation/run.py && npm update -g && pip3 install --upgrade pip && pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U --user && conda install anaconda -y && conda update --all -y && conda clean -ay"
 
 # mySQL
-export PATH=${PATH}:/usr/local/mysql/bin/
-alias mysqlstart="sudo /usr/local/mysql/support-files/mysql.server start"
+alias mysqlstart="mysql.server start"
 alias mysql="mysql -u root -p"
-alias mysqlrestart="sudo /usr/local/mysql/support-files/mysql.server restart"
-alias mysqlstop="sudo /usr/local/mysql/support-files/mysql.server stop"
+alias mysqlrestart="mysql.server restart"
+alias mysqlstop="mysql.server stop"
