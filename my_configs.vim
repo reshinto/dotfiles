@@ -1,14 +1,17 @@
 " python-mode: enable python 3 syntax checking, this setting may not be required
 " let g:pymode_python = 'python3'
-let g:pymode_lint_checkers = ['pylint']
-let g:ale_python_pylint_options = '--rcfile /Users/springfield/.pylintrc'
+" let g:pymode_lint_checkers = ['pylint']
+" let g:ale_python_pylint_options = '--rcfile /Users/springfield/.pylintrc'
 " Use message for output (e.g. I0011) instead of symbolic name of the message
-let g:ale_python_pylint_use_msg_id = 1
+" let g:ale_python_pylint_use_msg_id = 1
 " Disable python mode colorcolumn
-let g:pymode_options_colorcolumn = 0
+" let g:pymode_options_colorcolumn = 0
+
+let g:completor_python_binary = '/usr/local/bin/python3'
+
 
 " completor: enable javascript completion, this setting may not be required
-" let g:completor_node_binary = '/usr/local/bin/node'
+let g:completor_node_binary = '/usr/local/bin/node'
 
 
 " Enable indentation during command mode
@@ -30,7 +33,8 @@ let g:ale_fixers = {
             \'javascript': ['eslint'],
             \'html': ['prettier'],
             \'css': ['prettier'],
-            \'json': ['fixjson']
+            \'json': ['fixjson'],
+            \'python': ['pylint']
             \}
 " Set this variable to 1 to fix files when you save them.
 let g:ale_fix_on_save = 1
@@ -39,7 +43,8 @@ let g:ale_linters = {
             \'javascript': ['eslint'],
             \'html': ['tidy'],
             \'css': ['csslint'],
-            \'json': ['jsonlint']
+            \'json': ['jsonlint'],
+            \'python': ['pylint']
             \}
 
 " Prettier config file
@@ -65,7 +70,6 @@ set foldcolumn=0
 au FileType javascript setlocal nofoldenable
 " Prevents markdown from auto folding
 au FileType markdown setlocal nofoldenable
-
 
 
 " Set column limit to 80 for python and javascript
@@ -110,3 +114,11 @@ set tabstop=2       " The width of a TAB is set to 2.
 set shiftwidth=2    " Indents will have a width of 2.
 set softtabstop=0   " Sets the number of columns for a TAB.
 set expandtab       " Expand TABs to spaces.
+
+
+" display line number
+set number
+" set line number width
+set nuw=1
+" set color for line number, this overwrites the default colorscheme
+highlight LineNr ctermfg=grey
