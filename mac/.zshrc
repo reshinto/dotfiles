@@ -233,10 +233,10 @@ alias server="http-server"
 alias sua="sudo softwareupdate -i -a && brew update && brew upgrade && brew cleanup && brew cleanup -s && python3 /Users/springfield/my_apps/delete-spam-automation/run.py && npm update -g && pip3 install --upgrade pip && pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U --user && conda install anaconda -y && conda update --all -y && conda clean -ay"
 
 # mySQL
-alias mysqlstart="mysql.server start"
+alias mysqlstart="brew services start mysql"
 alias mysql="mysql -u root -p"
-alias mysqlrestart="mysql.server restart"
-alias mysqlstop="mysql.server stop"
+alias mysqlrestart="brew services restart mysql"
+alias mysqlstop="brew services stop mysql"
 # Change mySQL password
 # mysqladmin -u root password 'yourpassword'
 
