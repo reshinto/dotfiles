@@ -1,19 +1,3 @@
-" python-mode: enable python 3 syntax checking, this setting may not be required
-" let g:pymode_python = 'python3'
-" let g:pymode_lint_checkers = ['pylint']
-" let g:ale_python_pylint_options = '--rcfile /Users/springfield/.pylintrc'
-" Use message for output (e.g. I0011) instead of symbolic name of the message
-" let g:ale_python_pylint_use_msg_id = 1
-" Disable python mode colorcolumn
-" let g:pymode_options_colorcolumn = 0
-
-let g:completor_python_binary = '/usr/local/bin/python3'
-
-
-" completor: enable javascript completion, this setting may not be required
-let g:completor_node_binary = '/usr/local/bin/node'
-
-
 " Enable indentation during command mode
 nnoremap <Tab> >>_
 " Enable unindentation during command mode
