@@ -237,3 +237,5 @@ alias mysqlstart="mysql.server start"
 alias mysql="mysql -u root -p"
 alias mysqlrestart="mysql.server restart"
 alias mysqlstop="mysql.server stop"
+# Change mySQL password
+# mysqladmin -u root password 'yourpassword'
