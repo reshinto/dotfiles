@@ -107,6 +107,11 @@ set nuw=1
 " set color for line number, this overwrites the default colorscheme
 highlight LineNr ctermfg=grey
 
+
 " Enable auto close of preview window when using emantic engine
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
+
+" remap enter key to ctrl-y in insert mode
+" allow enter key to dismiss preview in YCM
+let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
