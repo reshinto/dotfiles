@@ -108,7 +108,7 @@ set nuw=1
 highlight LineNr ctermfg=grey
 
 
-" Enable auto close of preview window when using emantic engine
+" Enable auto close of preview window when using semantic engine
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
