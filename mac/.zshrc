@@ -131,7 +131,7 @@ source /Users/springfield/.authentication.sh
 alias tor="open -a 'tor browser'"
 
 # Dev shortcut
-alias dev="cd /Volumes/Speed/Dev"
+alias dev="cd /Volumes/Speed/dev"
 
 # delete Spam emails
 alias dspam="python3 /Users/springfield/my_apps/delete-spam-automation/run.py"
@@ -178,7 +178,7 @@ alias wsv="open -a windscribe"
 alias chrome='open -a "Google Chrome"'
 
 # IntelliJ Idea
-alias idea='open -a "IntelliJ IDEA"'
+alias idea='open -a "IntelliJ IDEA CE"'
 
 # spacemacs
 alias evim='emacs -nw'
@@ -193,14 +193,9 @@ alias alarm="python3 /Users/springfield/my_apps/alarm-volume-control/run_app.py"
 source /Users/springfield/.flaskTutorialTemp.sh
 
 # rename file or folder names
-alias rename="python3 /Volumes/Speed/Dev/Python_projects/My_Projects/Automation/rename_files/rename_files.py"
+alias rename="python3 /Volumes/Speed/dev/Python_projects/My_Projects/Automation/rename_files/rename_files.py"
 
 #alias mongod='mongod --dbpath /Users/springfield/data/db'
-
-# control my SG home LG tv
-export PATH="/Volumes/Speed/Dev/Python_projects/My_Projects/inDevelopment/hack_myTv/LGWebOSRemote:$PATH"
-alias atv="sa atv"
-alias tv="python3 /Volumes/Speed/Dev/Python_projects/My_Projects/inDevelopment/hack_myTv/LGWebOSRemote/lgtv.py"
 
 # webDev yelp-camp tutorial
 export DATABASEURL="mongodb://localhost:27017/yelp_camp"
@@ -212,10 +207,10 @@ source /Users/springfield/.CLOUDINARYAPI.sh
 export githubUser="reshinto"
 
 # python project default path
-export pyProject="/Volumes/Speed/Dev/Python_projects/My_Projects/inDevelopment"
+export pyProject="/Volumes/Speed/dev/Python_projects/My_Projects/inDevelopment"
 
 # web javascript project default path
-export webProject="/Volumes/Speed/Dev/Web_projects/my_projects"
+export webProject="/Volumes/Speed/dev/Web_projects/my_projects"
 
 # create new project automatically
 alias create="python3 /Users/springfield/my_apps/Automate_Building_projects/run.py"
@@ -243,3 +238,15 @@ alias mysqlstop="brew services stop mysql"
 # postgresql
 alias pgstart="brew services start postgresql"
 alias pgstop="brew services stop postgresql"
+
+# set default vim
+alias vim="mvim -v"
+
+# Anaconda python
+alias pythonconda="/usr/local/anaconda3/bin/./python"
+
+# Go to backup directory
+alias backup="/Volumes/backup"
+
+# Show current wifi password
+alias wifipw="wifi-password"
