@@ -97,6 +97,7 @@ brewCaskArr=(
   "slack"
   "dash"
   "force-paste"
+  "diffmerge"
 )
 
 install "brew cask" "${brewCaskArr[@]}"
