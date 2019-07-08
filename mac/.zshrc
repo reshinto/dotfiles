@@ -193,7 +193,7 @@ alias alarm="python3 /Users/springfield/my_apps/alarm-volume-control/run_app.py"
 source /Users/springfield/.flaskTutorialTemp.sh
 
 # rename file or folder names
-alias rename="python3 /Volumes/Speed/dev/Python_projects/My_Projects/Automation/rename_files/rename_files.py"
+alias rename="python3 /Users/springfield/dev/Python_projects/My_Projects/Automation/rename_files/rename_files.py"
 
 #alias mongod='mongod --dbpath /Users/springfield/data/db'
 
@@ -207,10 +207,10 @@ source /Users/springfield/.CLOUDINARYAPI.sh
 export githubUser="reshinto"
 
 # python project default path
-export pyProject="/Volumes/Speed/dev/Python_projects/My_Projects/inDevelopment"
+export pyProject="/Users/springfield/dev/Python_projects/My_Projects/inDevelopment"
 
 # web javascript project default path
-export webProject="/Volumes/Speed/dev/Web_projects/my_projects"
+export webProject="/Users/springfield/dev/Web_projects/my_projects"
 
 # create new project automatically
 alias create="python3 /Users/springfield/my_apps/Automate_Building_projects/run.py"
@@ -244,6 +244,9 @@ alias vim="mvim -v"
 
 # Anaconda python
 alias pythonconda="/usr/local/anaconda3/bin/./python"
+
+# VLC
+# alias vlc="/Applications/VLC.app/Contents/MacOS/VLC"
 
 # Go to backup directory
 alias backup="/Volumes/backup"
