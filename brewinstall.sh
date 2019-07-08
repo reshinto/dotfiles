@@ -72,3 +72,4 @@ brew cask install vagrant
 brew cask install vagrant-manager
 brew cask install windscribe
 brew cask install yt-music
+brew cask install slack
