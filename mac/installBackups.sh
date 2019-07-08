@@ -119,6 +119,7 @@ jsArr=(
   "nodemon"
   "prettier"
   "tern"
+  "ttab"
 )
 
 install "npm -g" "${jsArr[@]}"
