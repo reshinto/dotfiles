@@ -73,3 +73,5 @@ brew cask install vagrant-manager
 brew cask install windscribe
 brew cask install yt-music
 brew cask install slack
+brew cask install dash
+brew cask install force-paste
