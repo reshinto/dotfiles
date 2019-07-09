@@ -115,3 +115,16 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 " remap enter key to ctrl-y in insert mode
 " allow enter key to dismiss preview in YCM
 let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
+
+
+" Javascrip auto doc settings
+" Allow prompt for interactive input.
+let g:jsdoc_allow_input_prompt = 1
+" Prompt for a function description
+let g:jsdoc_input_description = 1
+" Prompt for a value for @name, add it to the JSDoc block comment along with the @function tag.
+let g:jsdoc_additional_descriptions = 1
+" Set value to 1 to turn on detecting underscore starting functions as private convention
+let g:jsdoc_underscore_private = 1
+" Enable to use ECMAScript6's Shorthand function, Arrow function.
+let g:jsdoc_enable_es6 = 1
