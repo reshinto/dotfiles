@@ -147,3 +147,16 @@ set clipboard=unnamed
 
 " shows partial commands in the last line of the screen
 set showcmd
+
+
+" ctrl + j to toggle between javascript mode and javascript.jsx mode
+" javascript.jsx mode is the default value
+" path autocomplete does not work on jsx mode
+nnoremap <C-j> :call JsxToggle()<cr>
+function! JsxToggle()
+  if &filetype ==# 'javascript.jsx'
+    setlocal ft=javascript
+  else
+    setlocal ft=javascript.jsx
+  endif
+endfunction
