@@ -128,3 +128,13 @@ let g:jsdoc_additional_descriptions = 1
 let g:jsdoc_underscore_private = 1
 " Enable to use ECMAScript6's Shorthand function, Arrow function.
 let g:jsdoc_enable_es6 = 1
+
+
+" Enable or disable GitGutter
+let g:gitgutter_enabled = 1
+" To turn on or off line higlighting
+let g:gitgutter_highlight_lines = 0
+" map leader + g to toggle GitGutter
+nmap <Leader>g :GitGutterToggle<CR>
+" diff marker update time option, default = 4000
+set updatetime=100
