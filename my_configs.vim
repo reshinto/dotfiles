@@ -138,3 +138,12 @@ let g:gitgutter_highlight_lines = 0
 nmap <Leader>g :GitGutterToggle<CR>
 " diff marker update time option, default = 4000
 set updatetime=100
+
+
+
+" enable yank to copy to clipboard
+set clipboard=unnamed
+
+
+" shows partial commands in the last line of the screen
+set showcmd
