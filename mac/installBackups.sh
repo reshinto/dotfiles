@@ -51,6 +51,7 @@ brewArr=(
   "tmux"
   "watchman"
   "wifi-password"
+  "autopep8"
 )
 
 install brew "${brewArr[@]}"
