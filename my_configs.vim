@@ -18,7 +18,7 @@ let g:ale_fixers = {
             \'html': ['prettier'],
             \'css': ['prettier'],
             \'json': ['fixjson'],
-            \'python': ['pylint']
+            \'python': ['autopep8']
             \}
 " Set this variable to 1 to fix files when you save them.
 let g:ale_fix_on_save = 1
