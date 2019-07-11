@@ -24,7 +24,6 @@ brewArr=(
   "zsh"
   "wget"
   "macvim"
-  "pipenv"
   "node"
   "yarn"
   "http-server"
@@ -108,6 +107,7 @@ pyArr=(
   "tqdm"
   "jedi"
   "pillow"
+  "pipenv"
 )
 
 install pip3 "${pyArr[@]}"
