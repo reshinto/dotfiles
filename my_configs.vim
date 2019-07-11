@@ -31,7 +31,8 @@ let g:ale_linters = {
             \'python': ['pylint']
             \}
 
-" Prettier config file
+
+" Prettier config settings
 " --tab-wdith <int>: Change default indentation from 2 to 4 for Javascript
 " --no-bracket-spacing: Remove default spacing between brackets
 let g:ale_javascript_prettier_options = '--tab-width 2 --no-bracket-spacing'
@@ -76,21 +77,15 @@ let g:rehash256 = 1
 colorscheme molokai
 
 
-" redirect back to original path after reconnecting external SSD
+" Redirect back to original path after reconnecting external SSD
 " can be called in the vim terminal via :Reset
 command! Reset cd | cd %:h
 
 
 " Indentation settings
-" Only do this part when compiled with support for autocommands.
-if has("autocmd")
-    " Use filetype detection and file-based automatic indenting.
-    filetype plugin indent on
-
-    " Use actual tab chars in Makefiles.
-    autocmd FileType python set tabstop=4 shiftwidth=4 softtabstop=0 expandtab
-endif
-" For everything else, use a tab width of 2 space chars.
+" For Python files, 4 spaces
+autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=0 expandtab
+" By default, 2 spaces.
 set tabstop=2       " The width of a TAB is set to 2.
                     " Still it is a \t. It is just that
                     " Vim will interpret it to be having
@@ -112,12 +107,13 @@ highlight LineNr ctermfg=grey
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
+
 " remap enter key to ctrl-y in insert mode
 " allow enter key to dismiss preview in YCM
 let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
 
 
-" Javascrip auto doc settings
+" Javascript auto doc settings
 " Allow prompt for interactive input.
 let g:jsdoc_allow_input_prompt = 1
 " Prompt for a function description
@@ -140,12 +136,11 @@ nmap <Leader>g :GitGutterToggle<CR>
 set updatetime=100
 
 
-
-" enable yank to copy to clipboard
+" Enable yank to copy to clipboard, delete will also be put into the Clipboard
 set clipboard=unnamed
 
 
-" shows partial commands in the last line of the screen
+" Shows partial commands in the last line of the screen
 set showcmd
 
 
