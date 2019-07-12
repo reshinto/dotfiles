@@ -140,6 +140,7 @@ set updatetime=100
 
 " Enable yank to copy to clipboard, delete will also be put into the Clipboard
 set clipboard=unnamed
+" type "*p instead of p to instantly paste large chunks of data into vim
 
 
 " Shows partial commands in the last line of the screen
