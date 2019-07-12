@@ -18,6 +18,7 @@ let g:ale_fixers = {
             \'html': ['prettier'],
             \'css': ['prettier'],
             \'json': ['fixjson'],
+            \'sql': ['sqlfmt'],
             \'python': ['autopep8']
             \}
 " Set this variable to 1 to fix files when you save them.
@@ -28,6 +29,7 @@ let g:ale_linters = {
             \'html': ['tidy'],
             \'css': ['csslint'],
             \'json': ['jsonlint'],
+            \'sql': ['sqlint'],
             \'python': ['pylint']
             \}
 
