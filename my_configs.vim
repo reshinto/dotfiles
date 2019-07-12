@@ -85,6 +85,8 @@ command! Reset cd | cd %:h
 " Indentation settings
 " For Python files, 4 spaces
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=0 expandtab
+" For SQL files, 4 spaces
+autocmd FileType sql setlocal tabstop=4 shiftwidth=4 softtabstop=0 expandtab
 " By default, 2 spaces.
 set tabstop=2       " The width of a TAB is set to 2.
                     " Still it is a \t. It is just that
