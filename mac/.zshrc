@@ -125,7 +125,7 @@ alias aur="brew cleanup && brew cleanup -s && conda clean -ay"
 export JAVA_HOME="`/usr/libexec/java_home -v 10`"
 
 # email and password
-source /Users/springfield/.authentication.sh
+source /Users/springfield/Dropbox/share/.authentication.sh
 
 # tor
 alias tor="open -a 'tor browser'"
@@ -190,7 +190,7 @@ alias cppcompile='c++ -std=c++11 -stdlib=libc++'
 alias alarm="python3 /Users/springfield/my_apps/alarm-volume-control/run_app.py"
 
 # flask tutorial secret key and database
-source /Users/springfield/.flaskTutorialTemp.sh
+source /Users/springfield/Dropbox/share/.flaskTutorialTemp.sh
 
 # rename file or folder names
 alias rename="python3 /Users/springfield/dev/Python_projects/My_Projects/Automation/rename_files/rename_files.py"
@@ -201,7 +201,7 @@ alias rename="python3 /Users/springfield/dev/Python_projects/My_Projects/Automat
 export DATABASEURL="mongodb://localhost:27017/yelp_camp"
 
 # CLOUDINARY API NAME KEY AND SECRET
-source /Users/springfield/.CLOUDINARYAPI.sh
+source /Users/springfield/Dropbox/share/.CLOUDINARYAPI.sh
 
 # github username
 export githubUser="reshinto"
@@ -229,7 +229,11 @@ alias sua="sudo softwareupdate -i -a && brew update && brew upgrade && brew clea
 
 # mySQL
 alias mysqlstart="brew services start mysql"
-alias mysql="mysql -u root -p"
+alias mysqlroot="mysql -u root -p"
+# default way of logging in
+# alias mysqlme="mysql -u springfield -p"
+# Add host if used "identified with mysql_native_password" setting
+alias mysqlme="mysql -u springfield -h localhost -p"
 alias mysqlrestart="brew services restart mysql"
 alias mysqlstop="brew services stop mysql"
 # Change mySQL password
@@ -244,9 +248,6 @@ alias vim="mvim -v"
 
 # Anaconda python
 alias pythonconda="/usr/local/anaconda3/bin/./python"
-
-# VLC
-# alias vlc="/Applications/VLC.app/Contents/MacOS/VLC"
 
 # Go to backup directory
 alias backup="/Volumes/backup"
