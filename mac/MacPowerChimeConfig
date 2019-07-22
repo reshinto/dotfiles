@@ -1,0 +1,5 @@
+// Turn on Power Chime (make noise when plugging in power source to Mac
+defaults write com.apple.PowerChime ChimeOnAllHardware -bool true /System/Library/CoreServices/PowerChime.app &
+
+// Turn off Power Chime, requires reboot to take effect
+defaults write com.apple.PowerChime ChimeOnAllHardware -bool false; killall PowerChime
