@@ -113,6 +113,7 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 " remap enter key to ctrl-y in insert mode
 " allow enter key to dismiss preview in YCM
 let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
+" Enable indentation and unindentation during insert mode
 
 
 " Javascript auto doc settings
@@ -158,3 +159,7 @@ function! JsxToggle()
     setlocal ft=javascript.jsx
   endif
 endfunction
+
+
+"Show filename in titlebar
+set title
