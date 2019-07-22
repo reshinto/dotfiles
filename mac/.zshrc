@@ -56,7 +56,7 @@ export UPDATE_ZSH_DAYS=1
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -131,7 +131,8 @@ source /Users/springfield/Dropbox/share/.authentication.sh
 alias tor="open -a 'tor browser'"
 
 # Dev shortcut
-alias dev="cd /Volumes/Speed/dev"
+alias sdev="cd /Volumes/Speed/dev"
+alias dev="cd /Users/springfield/dev"
 
 # delete Spam emails
 alias dspam="python3 /Users/springfield/my_apps/delete-spam-automation/run.py"
