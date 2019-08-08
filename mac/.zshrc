@@ -255,3 +255,6 @@ alias backup="/Volumes/backup"
 
 # Show current wifi password
 alias wifipw="wifi-password"
+
+# Play voice weather and time information
+alias sayweather="python3 /Users/springfield/my_apps/weather_app/weather.py"
