@@ -1,6 +1,6 @@
-YouCompleteMe
-emmet-vim
-molokai
-vim-javascript
-vim-jsdoc
-vim-jsx
+* YouCompleteMe
+* emmet-vim
+* molokai
+* vim-javascript
+* vim-jsdoc
+* vim-jsx
