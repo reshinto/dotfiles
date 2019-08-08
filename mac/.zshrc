@@ -127,6 +127,9 @@ export JAVA_HOME="`/usr/libexec/java_home -v 10`"
 # email and password
 source /Users/springfield/Dropbox/share/.authentication.sh
 
+# api keys
+source /Users/springfield/Dropbox/share/.apikeys.sh
+
 # tor
 alias tor="open -a 'tor browser'"
 
