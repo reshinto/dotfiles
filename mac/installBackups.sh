@@ -108,6 +108,7 @@ pyArr=(
   "jedi"
   "pillow"
   "pipenv"
+  "darksky_weather"
 )
 
 install pip3 "${pyArr[@]}"
