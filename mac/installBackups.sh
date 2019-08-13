@@ -123,6 +123,7 @@ jsArr=(
   "prettier"
   "tern"
   "ttab"
+  "voices"
 )
 
 install "npm -g" "${jsArr[@]}"
