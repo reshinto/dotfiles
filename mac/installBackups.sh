@@ -98,6 +98,7 @@ brewCaskArr=(
   "dash"
   "force-paste"
   "diffmerge"
+  "db-browser-for-sqlite"
 )
 
 install "brew cask" "${brewCaskArr[@]}"
