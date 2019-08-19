@@ -81,6 +81,11 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  python
+  heroku
+  osx
+  zsh_reload
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -260,4 +265,4 @@ alias backup="/Volumes/backup"
 alias wifipw="wifi-password"
 
 # Play voice weather and time information
-alias sayweather="python3 /Users/springfield/my_apps/weather_app/weather.py"
+alias sw="python3 /Users/springfield/my_apps/weather_app/weather.py"
