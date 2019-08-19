@@ -129,12 +129,25 @@ jsArr=(
 
 install "npm -g" "${jsArr[@]}"
 
-# install amix vimrc
-git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
-sh ~/.vim_runtime/install_awesome_vimrc.sh
-
 # install oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# install zsh-syntax-highlighting
+# install git clones
+# zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+# amix vimrc
+git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+sh ~/.vim_runtime/install_awesome_vimrc.sh
+# emmet-vim
+git clone https://github.com/mattn/emmet-vim.git ~/.vim_runtime/my_plugins/emmet-vim
+# molokai
+git clone https://github.com/tomasr/molokai.git ~/.vim_runtime/my_plugins/molokai
+# vim-javascript
+git clone https://github.com/pangloss/vim-javascript.git ~/.vim_runtime/my_plugins/vim-javascript
+# vim-jsdoc
+git clone https://github.com/heavenshell/vim-jsdoc.git ~/.vim_runtime/my_plugins/vim-jsdoc
+# vim-jsx
+git clone https://github.com/mxw/vim-jsx.git ~/.vim_runtime/my_plugins/vim-jsx
+# YouCompleteMe
+git clone https://github.com/ycm-core/YouCompleteMe.git ~/.vim_runtime/my_plugins/YouCompleteMe
+python3 ~/.vim_runtime/my_plugins/YouCompleteMe/install.py --all
