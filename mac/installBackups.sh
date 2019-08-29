@@ -52,6 +52,7 @@ brewArr=(
   "wifi-password"
   "autopep8"
   "httpie"
+  "mongodb"
 )
 
 install brew "${brewArr[@]}"
