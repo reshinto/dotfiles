@@ -51,6 +51,7 @@ brewArr=(
   "watchman"
   "wifi-password"
   "autopep8"
+  "httpie"
 )
 
 install brew "${brewArr[@]}"
