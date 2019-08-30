@@ -269,3 +269,6 @@ alias sw="python3 /Users/springfield/my_apps/weather_app/weather.py"
 
 # Search for solutions with cheat.sh
 alias cs="cht.sh"
+
+# shortcut for searching on google
+alias goo="googler"
