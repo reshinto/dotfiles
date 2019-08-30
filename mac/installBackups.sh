@@ -53,6 +53,7 @@ brewArr=(
   "autopep8"
   "httpie"
   "mongodb"
+  "rlwrap"
 )
 
 install brew "${brewArr[@]}"
@@ -153,3 +154,7 @@ git clone https://github.com/mxw/vim-jsx.git ~/.vim_runtime/my_plugins/vim-jsx
 # YouCompleteMe
 git clone https://github.com/ycm-core/YouCompleteMe.git ~/.vim_runtime/my_plugins/YouCompleteMe
 python3 ~/.vim_runtime/my_plugins/YouCompleteMe/install.py --all
+
+# install cheat.sh
+curl https://cht.sh/:cht.sh | sudo tee /usr/local/bin/cht.sh
+sudo chmod +x /usr/local/bin/cht.sh
