@@ -9,7 +9,7 @@ function install() {
   arr=("$@")
   for i in "${arr[@]}";
   do
-    $cmd install "$i"
+    $cmd "$i"
   done
 }
 
@@ -54,9 +54,10 @@ brewArr=(
   "httpie"
   "mongodb"
   "rlwrap"
+  "fzf"
 )
 
-install brew "${brewArr[@]}"
+install "brew install" "${brewArr[@]}"
 
 # brew cask
 # https://caskroom.github.io/search
@@ -104,7 +105,7 @@ brewCaskArr=(
   "db-browser-for-sqlite"
 )
 
-install "brew cask" "${brewCaskArr[@]}"
+install "brew cask install" "${brewCaskArr[@]}"
 
 # python3 packages
 pyArr=(
@@ -115,7 +116,7 @@ pyArr=(
   "darksky_weather"
 )
 
-install pip3 "${pyArr[@]}"
+install "pip3 install" "${pyArr[@]}"
 
 # npm packages
 jsArr=(
@@ -128,9 +129,12 @@ jsArr=(
   "tern"
   "ttab"
   "voices"
+  "mocha"
+  "chai"
+  "jasmine"
 )
 
-install "npm -g" "${jsArr[@]}"
+install "npm -g i" "${jsArr[@]}"
 
 # install oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -139,7 +143,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 # zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 # zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 # amix vimrc
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
