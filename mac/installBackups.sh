@@ -55,6 +55,7 @@ brewArr=(
   "mongodb"
   "rlwrap"
   "fzf"
+  "neomutt"
 )
 
 install "brew install" "${brewArr[@]}"
