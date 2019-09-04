@@ -19,3 +19,5 @@ set move = no
 set imap_keepalive = 900
 set record="+Sent"
 set smtp_authenticators = ""
+
+macro index d "<save-message>=Deleted<enter><sync-mailbox>"
