@@ -26,3 +26,5 @@ set realname = "my name"
 set from = $my_email1
 set smtp_authenticators = "plain"
 set ssl_force_tls = yes
+
+macro index d "<save-message>=[Gmail]/Trash<enter><sync-mailbox>"
