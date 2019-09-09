@@ -12,6 +12,7 @@
   "tabWidth": 2,
   "trailingComma": "all",
   "useTabs": false,
+  "quoteProps": "preserve",
   "overrides": [
     {
       "files": "*.json",
