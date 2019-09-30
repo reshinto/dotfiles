@@ -35,7 +35,7 @@ let g:ale_linters = {
 " Prettier config settings
 " --tab-wdith <int>: Change default indentation from 2 to 4 for Javascript
 " --no-bracket-spacing: Remove default spacing between brackets
-let g:ale_javascript_prettier_options = '--tab-width 2 --no-bracket-spacing'
+" let g:ale_javascript_prettier_options = '--tab-width 2 --no-bracket-spacing'
 " let g:ale_css_stylelint_options = '--indentation 4'
 
 
