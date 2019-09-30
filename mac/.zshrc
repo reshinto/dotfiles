@@ -281,3 +281,9 @@ alias goo="googler"
 
 # email
 alias em="neomutt"
+
+# auto push to github
+alias push="python3 ~/dev/Python_projects/useless_apps/createRepo.py"
+
+# automate git clone, folder create, and cd
+alias clone="source ~/my_apps/clone.sh"
