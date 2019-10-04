@@ -104,6 +104,7 @@ brewCaskArr=(
   "force-paste"
   "diffmerge"
   "db-browser-for-sqlite"
+  "ngrok"
 )
 
 install "brew cask install" "${brewCaskArr[@]}"
