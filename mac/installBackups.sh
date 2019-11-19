@@ -134,6 +134,7 @@ jsArr=(
   "mocha"
   "chai"
   "jasmine"
+  "@cloudflare/wrangler"
 )
 
 install "npm -g i" "${jsArr[@]}"
