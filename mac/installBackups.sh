@@ -56,6 +56,7 @@ brewArr=(
   "rlwrap"
   "fzf"
   "neomutt"
+  "nasm"
 )
 
 install "brew install" "${brewArr[@]}"
