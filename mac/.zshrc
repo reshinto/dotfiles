@@ -4,6 +4,7 @@ neofetch
 # If you come from bash you might have to change your $PATH.
 #export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+
 # Anaconda path
 export PATH="/usr/local/anaconda3/bin:$PATH"
 
@@ -125,6 +126,9 @@ export GIT_EDITOR=vim
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# python3 path (installed via homebrew)
+alias python3="/usr/local/bin/python3"
+
 # update and upgrade everything
 # automate sudo command without input password with "echo password | sudo -S command"
 alias sue="sudo softwareupdate -i -a && brew update && brew upgrade && brew cleanup && brew cleanup -s && conda clean -ay"
@@ -213,7 +217,7 @@ alias rename="python3 /Users/springfield/dev/Python_projects/My_Projects/Automat
 #alias mongod='mongod --dbpath /Users/springfield/data/db'
 
 # webDev yelp-camp tutorial
-export DATABASEURL="mongodb://localhost:27017/yelp_camp"
+# export DATABASEURL="mongodb://localhost:27017/yelp_camp"
 
 # CLOUDINARY API NAME KEY AND SECRET
 source /Users/springfield/Dropbox/share/.CLOUDINARYAPI.sh
@@ -287,3 +291,7 @@ alias push="python3 ~/dev/Python_projects/useless_apps/createRepo.py"
 
 # automate git clone, folder create, and cd
 alias clone="source ~/my_apps/clone.sh"
+
+# rbenv path
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
