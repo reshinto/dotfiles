@@ -21,6 +21,7 @@ xcode-select --install
 
 # brew packages
 brewArr=(
+  "python"
   "zsh"
   "wget"
   "macvim"
