@@ -58,6 +58,7 @@ brewArr=(
   "fzf"
   "neomutt"
   "nasm"
+  "mono"
 )
 
 install "brew install" "${brewArr[@]}"
