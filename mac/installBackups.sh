@@ -108,6 +108,7 @@ brewCaskArr=(
   "diffmerge"
   "db-browser-for-sqlite"
   "ngrok"
+  "visual-studio"
 )
 
 install "brew cask install" "${brewCaskArr[@]}"
