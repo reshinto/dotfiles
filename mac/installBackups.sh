@@ -110,6 +110,7 @@ brewCaskArr=(
   "db-browser-for-sqlite"
   "ngrok"
   "visual-studio"
+  "dotnet-sdk"
 )
 
 install "brew cask install" "${brewCaskArr[@]}"
