@@ -111,6 +111,7 @@ brewCaskArr=(
   "ngrok"
   "visual-studio"
   "dotnet-sdk"
+  "azure-data-studio"
 )
 
 install "brew cask install" "${brewCaskArr[@]}"
