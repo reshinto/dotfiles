@@ -85,6 +85,7 @@ brewCaskArr=(
   "cheatsheet"
   "falcon-sql-client"
   "docker"
+  "kitematic"
   "github"
   "grammarly"
   "java"
