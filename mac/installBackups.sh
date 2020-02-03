@@ -113,6 +113,7 @@ brewCaskArr=(
   "visual-studio"
   "dotnet-sdk"
   "azure-data-studio"
+  "xquartz"
 )
 
 install "brew cask install" "${brewCaskArr[@]}"
