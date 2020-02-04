@@ -145,6 +145,7 @@ jsArr=(
   "jasmine"
   "@cloudflare/wrangler"
   "sql-cli"
+  "@angular/cli"
 )
 
 install "npm -g i" "${jsArr[@]}"
