@@ -4,7 +4,6 @@ neofetch
 # If you come from bash you might have to change your $PATH.
 #export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-
 # Anaconda path
 export PATH="/usr/local/anaconda3/bin:$PATH"
 
@@ -291,6 +290,9 @@ alias push="python3 ~/dev/Python_projects/useless_apps/createRepo.py"
 
 # automate git clone, folder create, and cd
 alias clone="source ~/my_apps/clone.sh"
+
+# find current folder size
+alias sz="du -sh"
 
 # rbenv path
 export PATH="$HOME/.rbenv/bin:$PATH"
