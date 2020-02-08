@@ -171,6 +171,8 @@ git clone https://github.com/pangloss/vim-javascript.git ~/.vim_runtime/my_plugi
 git clone https://github.com/heavenshell/vim-jsdoc.git ~/.vim_runtime/my_plugins/vim-jsdoc
 # vim-jsx
 git clone https://github.com/mxw/vim-jsx.git ~/.vim_runtime/my_plugins/vim-jsx
+# omnisharp-vim
+https://github.com/OmniSharp/omnisharp-vim.git ~/.vim_runtime/my_plugins/omnisharp-vim
 # YouCompleteMe
 git clone https://github.com/ycm-core/YouCompleteMe.git ~/.vim_runtime/my_plugins/YouCompleteMe
 python3 ~/.vim_runtime/my_plugins/YouCompleteMe/install.py --all
