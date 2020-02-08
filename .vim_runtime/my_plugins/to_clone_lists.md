@@ -4,3 +4,4 @@
 * vim-javascript
 * vim-jsdoc
 * vim-jsx
+* omnisharp-vim
