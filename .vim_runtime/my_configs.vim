@@ -163,3 +163,7 @@ endfunction
 
 "Show filename in titlebar
 set title
+
+
+" C# plugin
+let g:OmniSharp_server_stdio = 1
