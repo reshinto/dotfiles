@@ -4,6 +4,7 @@ neofetch
 # If you come from bash you might have to change your $PATH.
 #export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+
 # Anaconda path
 export PATH="/usr/local/anaconda3/bin:$PATH"
 
@@ -297,3 +298,6 @@ alias sz="du -sh"
 # rbenv path
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# Add .NET Core SDK tools
+export PATH="$PATH:/Users/springfield/.dotnet/tools"
