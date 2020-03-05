@@ -114,6 +114,7 @@ brewCaskArr=(
   "dotnet-sdk"
   "azure-data-studio"
   "xquartz"
+  "unpkg"
 )
 
 install "brew cask install" "${brewCaskArr[@]}"
