@@ -144,6 +144,7 @@ jsArr=(
   "mocha"
   "chai"
   "jasmine"
+  "serve"
   "@cloudflare/wrangler"
   "sql-cli"
   "@angular/cli"
