@@ -148,6 +148,8 @@ jsArr=(
   "@cloudflare/wrangler"
   "sql-cli"
   "@angular/cli"
+  "typescript"
+  "ts-node"
 )
 
 install "npm -g i" "${jsArr[@]}"
