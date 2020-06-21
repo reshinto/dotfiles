@@ -42,7 +42,7 @@
       "typescript",
       "typescriptreact"
   ],
-  "tslint.enable": false
+  "tslint.enable": false,
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
     "ejs": "html"
