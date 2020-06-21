@@ -4,7 +4,6 @@ neofetch
 # If you come from bash you might have to change your $PATH.
 #export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-
 # Anaconda path
 export PATH="/usr/local/anaconda3/bin:$PATH"
 
@@ -294,6 +293,12 @@ alias clone="source ~/my_apps/clone.sh"
 
 # find current folder size
 alias sz="du -sh"
+
+# Use Yarn to setup basic nodeJS environment with airbnb style linter setup
+alias yinit="git init; yarn init -y; curl https://raw.githubusercontent.com/reshinto/dotfiles/master/.gitignore >> .gitignore; git add .; git commit -m 'initial commit'; npx poetic; yarn add -D nodemon dotenv; yarn add esm; mkdir src; touch src/index.js"
+
+# Use npm to setup basic nodeJS environment with airbnb style linter setup
+alias yinit="git init; npm init -y; curl https://raw.githubusercontent.com/reshinto/dotfiles/master/.gitignore >> .gitignore; git add .; git commit -m 'initial commit'; npx poetic; npm i --save-dev nodemon dotenv; npm i esm; mkdir src; touch src/index.js"
 
 # rbenv path
 export PATH="$HOME/.rbenv/bin:$PATH"
