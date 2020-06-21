@@ -1,0 +1,50 @@
+{
+  "editor.formatOnSave": true,
+  "vim.easymotionMarkerFontSize": "14",
+  "vim.leader": ",",
+  "vim.vimrc.enable": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<tab>"],
+      "commands": ["editor.action.indentLines"]
+    },
+    {
+      "before": ["<shift+tab>"],
+      "commands": ["editor.action.outdentLines"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<tab>"],
+      "commands": ["editor.action.indentLines"]
+    },
+    {
+      "before": ["<shift+tab>"],
+      "commands": ["editor.action.outdentLines"]
+    }
+  ],
+  "workbench.sideBar.location": "right",
+  "vim.autoindent": false,
+  "prettier.bracketSpacing": false,
+  "eslint.format.enable": true,
+  "editor.tabSize": 2,
+  "vim.useSystemClipboard": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "window.zoomLevel": 0,
+    "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact"
+  ],
+  "tslint.enable": false
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "ejs": "html"
+  }
+}
