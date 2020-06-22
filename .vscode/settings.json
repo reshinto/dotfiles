@@ -11,6 +11,24 @@
     {
       "before": ["<shift+tab>"],
       "commands": ["editor.action.outdentLines"]
+    },
+    {
+      "before": ["u"],
+      "after": [],
+      "commands": [
+        {
+          "command": "undo"
+        }
+      ]
+    },
+    {
+      "before": ["<C-r>"],
+      "after": [],
+      "commands": [
+        {
+          "command": "redo"
+        }
+      ]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -29,7 +47,6 @@
   "eslint.format.enable": true,
   "editor.tabSize": 2,
   "vim.useSystemClipboard": true,
-  "workbench.startupEditor": "newUntitledFile",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "liveServer.settings.donotShowInfoMsg": true,
   "window.zoomLevel": 0,
