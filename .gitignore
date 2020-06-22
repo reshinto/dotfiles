@@ -120,6 +120,12 @@ coverage.xml
 
 # linters
 .pylintrc
+.editorconfig
+.eslintignore
+.eslintrc*
+.prettierrc*
+.vscode/
+tsconfig.json
 
 # misc
 .DS_Store
