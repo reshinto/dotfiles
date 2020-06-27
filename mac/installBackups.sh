@@ -181,6 +181,8 @@ git clone https://github.com/OmniSharp/omnisharp-vim.git ~/.vim_runtime/my_plugi
 git clone --recursive https://github.com/ycm-core/YouCompleteMe.git ~/.vim_runtime/my_plugins/YouCompleteMe
 python3 ~/.vim_runtime/my_plugins/YouCompleteMe/install.py --all
 
+curl https://raw.githubusercontent.com/reshinto/dotfiles/master/.vim_runtime/my_configs.vim > ~/.vim_runtime/my_configs.vim
+
 # install cheat.sh
 curl https://cht.sh/:cht.sh | sudo tee /usr/local/bin/cht.sh
 sudo chmod +x /usr/local/bin/cht.sh
