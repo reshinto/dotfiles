@@ -60,6 +60,7 @@ brewArr=(
   "nasm"
   "mono"
   "vifm"
+  "pipenv"
 )
 
 install "brew install" "${brewArr[@]}"
@@ -124,7 +125,6 @@ pyArr=(
   "tqdm"
   "jedi"
   "pillow"
-  "pipenv"
   "darksky_weather"
 )
 
