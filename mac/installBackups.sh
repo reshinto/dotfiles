@@ -73,6 +73,7 @@ brewCaskArr=(
   "vlc"
   "google-chrome"
   "google-hangouts"
+  "firefox"
   "whatsapp"
   "dropbox"
   "mactex"
