@@ -61,6 +61,7 @@ brewArr=(
   "mono"
   "vifm"
   "pipenv"
+  "java"
 )
 
 install "brew install" "${brewArr[@]}"
@@ -90,7 +91,6 @@ brewCaskArr=(
   "kitematic"
   "github"
   "grammarly"
-  "java"
   "mongodb-compass-community"
   "nvidia-geforce-now"
   "osxfuse"
