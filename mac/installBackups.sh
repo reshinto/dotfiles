@@ -117,6 +117,7 @@ brewCaskArr=(
   "azure-data-studio"
   "xquartz"
   "unpkg"
+  "visual-studio-code"
 )
 
 install "brew cask install" "${brewCaskArr[@]}"
