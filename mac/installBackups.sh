@@ -62,6 +62,7 @@ brewArr=(
   "vifm"
   "pipenv"
   "java"
+  "jenkins-lts"
 )
 
 install "brew install" "${brewArr[@]}"
