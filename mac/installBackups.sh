@@ -63,6 +63,7 @@ brewArr=(
   "pipenv"
   "java"
   "jenkins-lts"
+  "groovy"
 )
 
 install "brew install" "${brewArr[@]}"
