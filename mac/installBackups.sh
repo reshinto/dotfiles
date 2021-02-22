@@ -64,6 +64,7 @@ brewArr=(
   "java"
   "jenkins-lts"
   "groovy"
+  "zoom"
 )
 
 install "brew install" "${brewArr[@]}"
