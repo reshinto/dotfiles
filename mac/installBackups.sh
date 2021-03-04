@@ -121,6 +121,7 @@ brewCaskArr=(
   "xquartz"
   "unpkg"
   "visual-studio-code"
+  "intellij-idea-ce"
 )
 
 install "brew cask install" "${brewCaskArr[@]}"
