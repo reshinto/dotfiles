@@ -66,6 +66,7 @@ brewArr=(
   "groovy"
   "zoom"
   "intellij-idea-ce"
+  "nginx"
 )
 
 install "brew install" "${brewArr[@]}"
