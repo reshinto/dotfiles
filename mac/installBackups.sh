@@ -65,6 +65,7 @@ brewArr=(
   "jenkins-lts"
   "groovy"
   "zoom"
+  "intellij-idea-ce"
 )
 
 install "brew install" "${brewArr[@]}"
@@ -121,7 +122,6 @@ brewCaskArr=(
   "xquartz"
   "unpkg"
   "visual-studio-code"
-  "intellij-idea-ce"
 )
 
 install "brew cask install" "${brewCaskArr[@]}"
