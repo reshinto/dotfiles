@@ -67,6 +67,7 @@ brewArr=(
   "zoom"
   "intellij-idea-ce"
   "nginx"
+  "redis"
 )
 
 install "brew install" "${brewArr[@]}"
