@@ -164,6 +164,9 @@ install "npm -g i" "${jsArr[@]}"
 
 # install sdkman: tool for managing parallel versions of multiple Software Development Kits
 curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+sdk install springboot
 
 # install oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
