@@ -69,6 +69,7 @@ brewArr=(
   "nginx"
   "redis"
   "springboot"
+  "mvn"
 )
 
 install "brew install" "${brewArr[@]}"
