@@ -4,7 +4,6 @@ neofetch
 # If you come from bash you might have to change your $PATH.
 #export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-
 # Anaconda path
 export PATH="/usr/local/anaconda3/bin:$PATH"
 
@@ -137,7 +136,7 @@ alias sue="sudo softwareupdate -i -a && brew update && brew upgrade && brew clea
 alias aur="brew cleanup && brew cleanup -s && conda clean -ay"
 
 # Java home path
-export JAVA_HOME="`/usr/libexec/java_home -v 10`"
+# export JAVA_HOME="`/usr/libexec/java_home -v 10`"
 
 # email and password
 source /Users/springfield/Dropbox/share/.authentication.sh
@@ -309,4 +308,13 @@ export ANDROID_SDK=/Users/springfield/Library/Android/sdk
 export PATH=/Users/springfield/Library/Android/sdk/platform-tools:$PATH
 
 # Add java javajdk path
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
+# export PATH="/usr/local/opt/openjdk/bin:$PATH"
+
+# Use to manage different java versions
+# jEnv configuration
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/springfield/.sdkman"
+[[ -s "/Users/springfield/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/springfield/.sdkman/bin/sdkman-init.sh"
