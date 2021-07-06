@@ -70,6 +70,7 @@ brewArr=(
   "redis"
   "springboot"
   "mvn"
+  "jenv"
 )
 
 install "brew install" "${brewArr[@]}"
