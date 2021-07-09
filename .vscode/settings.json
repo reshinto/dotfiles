@@ -1,5 +1,6 @@
 {
   "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "vim.easymotionMarkerFontSize": "14",
   "vim.leader": ",",
   "vim.vimrc.enable": true,
@@ -59,6 +60,5 @@
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
     "ejs": "html"
-  },
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
