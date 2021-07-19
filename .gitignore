@@ -127,5 +127,8 @@ coverage.xml
 .vscode/
 tsconfig.json
 
+# Editors
+.vscode/
+
 # misc
 .DS_Store
