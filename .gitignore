@@ -124,7 +124,6 @@ coverage.xml
 .eslintignore
 .eslintrc*
 .prettierrc*
-.vscode/
 tsconfig.json
 
 # Editors
