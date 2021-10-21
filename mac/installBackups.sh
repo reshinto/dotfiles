@@ -71,6 +71,7 @@ brewArr=(
   "springboot"
   "mvn"
   "jenv"
+  "kotlin"
 )
 
 install "brew install" "${brewArr[@]}"
