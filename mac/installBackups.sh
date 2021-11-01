@@ -130,7 +130,7 @@ brewCaskArr=(
   "visual-studio-code"
 )
 
-install "brew cask install" "${brewCaskArr[@]}"
+install "brew install --cask" "${brewCaskArr[@]}"
 
 # python3 packages
 pyArr=(
