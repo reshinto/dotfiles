@@ -294,6 +294,9 @@ alias clone="source ~/my_apps/clone.sh"
 # find current folder size
 alias sz="du -sh"
 
+# delete all node_modules
+alias delnode="find . -name "node_modules" -type d -prune -exec rm -rf '{}' +"
+
 # rbenv path
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
