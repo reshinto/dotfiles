@@ -294,6 +294,9 @@ alias clone="source ~/my_apps/clone.sh"
 # find current folder size
 alias sz="du -sh"
 
+# list all available node_modules
+alias listnode="find . -name "node_modules" -type d -prune | xargs du -chs"
+
 # delete all node_modules
 alias delnode="find . -name "node_modules" -type d -prune -exec rm -rf '{}' +"
 
