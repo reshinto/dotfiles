@@ -41,7 +41,6 @@ brewArr=(
   "darksky-weather"
   "docker"
   "docker-clean"
-  "docker-completion"
   "ffmpeg"
   "googler"
   "ranger"
@@ -128,6 +127,8 @@ brewCaskArr=(
   "xquartz"
   "unpkg"
   "visual-studio-code"
+  "genymotion"
+  "licecap"
 )
 
 install "brew install --cask" "${brewCaskArr[@]}"
