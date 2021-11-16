@@ -129,6 +129,7 @@ brewCaskArr=(
   "visual-studio-code"
   "genymotion"
   "licecap"
+  "react-native-debugger"
 )
 
 install "brew install --cask" "${brewCaskArr[@]}"
