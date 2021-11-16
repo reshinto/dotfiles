@@ -130,6 +130,7 @@ brewCaskArr=(
   "genymotion"
   "licecap"
   "react-native-debugger"
+  "reactotron"
 )
 
 install "brew install --cask" "${brewCaskArr[@]}"
