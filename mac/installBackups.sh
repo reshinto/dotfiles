@@ -40,7 +40,6 @@ brewArr=(
   "chrome-cli"
   "darksky-weather"
   "docker"
-  "docker-clean"
   "ffmpeg"
   "googler"
   "ranger"
@@ -131,6 +130,7 @@ brewCaskArr=(
   "licecap"
   "react-native-debugger"
   "reactotron"
+  "audacity"
 )
 
 install "brew install --cask" "${brewCaskArr[@]}"
