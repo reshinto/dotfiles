@@ -126,7 +126,6 @@ brewCaskArr=(
   "xquartz"
   "unpkg"
   "visual-studio-code"
-  "genymotion"
   "licecap"
   "react-native-debugger"
   "reactotron"
