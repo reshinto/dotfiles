@@ -321,6 +321,10 @@ export PATH=/Users/springfield/Library/Android/sdk/platform-tools:$PATH
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
+# required for nvm to manage node versions
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/springfield/.sdkman"
 [[ -s "/Users/springfield/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/springfield/.sdkman/bin/sdkman-init.sh"
