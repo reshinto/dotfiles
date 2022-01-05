@@ -201,3 +201,7 @@ curl https://raw.githubusercontent.com/reshinto/dotfiles/master/.vim_runtime/my_
 # install cheat.sh
 curl https://cht.sh/:cht.sh | sudo tee /usr/local/bin/cht.sh
 sudo chmod +x /usr/local/bin/cht.sh
+
+# create nvm folder for node version management, then install latest version of node
+mkdir ~/.nvm
+nvm install node
