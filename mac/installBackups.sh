@@ -25,6 +25,7 @@ brewArr=(
   "zsh"
   "wget"
   "macvim"
+  "nvm"
   "node"
   "yarn"
   "http-server"
