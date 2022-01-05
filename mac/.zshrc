@@ -285,9 +285,6 @@ alias goo="googler"
 # email
 alias em="neomutt"
 
-# auto push to github
-alias push="python3 ~/dev/Python_projects/useless_apps/createRepo.py"
-
 # automate git clone, folder create, and cd
 alias clone="source ~/my_apps/clone.sh"
 
@@ -299,6 +296,9 @@ alias listnode="find . -name "node_modules" -type d -prune | xargs du -chs"
 
 # delete all node_modules
 alias delnode="find . -name "node_modules" -type d -prune -exec rm -rf '{}' +"
+
+# login to cloud
+#alias sshcloud="ssh reshinto@cloud_ip_address"
 
 # rbenv path
 export PATH="$HOME/.rbenv/bin:$PATH"
