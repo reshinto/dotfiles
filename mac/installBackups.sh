@@ -131,6 +131,7 @@ brewCaskArr=(
   "react-native-debugger"
   "reactotron"
   "audacity"
+  "nordvpn"
 )
 
 install "brew install --cask" "${brewCaskArr[@]}"
