@@ -71,6 +71,7 @@ brewArr=(
   "mvn"
   "jenv"
   "kotlin"
+  "MinGW-w64"
 )
 
 install "brew install" "${brewArr[@]}"
