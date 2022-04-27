@@ -72,6 +72,7 @@ brewArr=(
   "jenv"
   "kotlin"
   "MinGW-w64"
+  "minikube"
 )
 
 install "brew install" "${brewArr[@]}"
