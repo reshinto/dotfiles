@@ -33,7 +33,6 @@ brewArr=(
   "mysql"
   "postgresql"
   "cmus"
-  "eslint"
   "tiny-html5"
   "neofetch"
   "mps-youtube"
