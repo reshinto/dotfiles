@@ -67,11 +67,12 @@ brewArr=(
   "nginx"
   "redis"
   "springboot"
-  "mvn"
+  "maven"
   "jenv"
   "kotlin"
   "MinGW-w64"
   "minikube"
+  "gradle"
 )
 
 install "brew install" "${brewArr[@]}"
