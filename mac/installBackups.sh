@@ -73,6 +73,7 @@ brewArr=(
   "MinGW-w64"
   "minikube"
   "gradle"
+  "kubectl"
 )
 
 install "brew install" "${brewArr[@]}"
