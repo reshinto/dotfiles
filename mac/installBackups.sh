@@ -135,6 +135,7 @@ brewCaskArr=(
   "reactotron"
   "audacity"
   "nordvpn"
+  "visualvm"
 )
 
 install "brew install --cask" "${brewCaskArr[@]}"
