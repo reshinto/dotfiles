@@ -170,6 +170,7 @@ jsArr=(
   "@angular/cli"
   "typescript"
   "ts-node"
+  "carbon-now-cli"
 )
 
 install "npm -g i" "${jsArr[@]}"
