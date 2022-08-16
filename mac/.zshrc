@@ -300,6 +300,15 @@ alias delnode="find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"
 # login to cloud
 #alias sshcloud="ssh reshinto@cloud_ip_address"
 
+# docker node env
+alias dnode="docker run -it --rm -p 5000:5000 -v $(pwd):/app -w='/app' node bash"
+
+# docker python env
+alias dpython="docker run -it --rm -p 5001:5001 -v $(pwd):/app -w='/app' python bash"
+
+# docker java env
+alias djava="docker run -it --rm -p 5002:5002 -v $(pwd):/app -w='/app' openjdk bash"
+
 # rbenv path
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
