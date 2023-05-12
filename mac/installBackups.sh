@@ -62,7 +62,6 @@ brewArr=(
   "java"
   "jenkins-lts"
   "groovy"
-  "zoom"
   "intellij-idea-ce"
   "nginx"
   "redis"
@@ -136,6 +135,7 @@ brewCaskArr=(
   "audacity"
   "nordvpn"
   "visualvm"
+  "zoom"
 )
 
 install "brew install --cask" "${brewCaskArr[@]}"
