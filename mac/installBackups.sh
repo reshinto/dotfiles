@@ -96,7 +96,6 @@ brewCaskArr=(
   "android-file-transfer"
   "android-studio"
   "appcleaner"
-  "avira-antivirus"
   "cheatsheet"
   "falcon-sql-client"
   "kitematic"
