@@ -135,6 +135,7 @@ brewCaskArr=(
   "nordvpn"
   "visualvm"
   "zoom"
+  "microsoft-teams"
 )
 
 install "brew install --cask" "${brewCaskArr[@]}"
