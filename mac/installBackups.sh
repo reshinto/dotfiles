@@ -21,7 +21,7 @@ xcode-select --install
 
 # brew packages
 brewArr=(
-  "python"
+  "pyenv"
   "zsh"
   "wget"
   "macvim"
@@ -72,7 +72,7 @@ brewArr=(
   "MinGW-w64"
   "minikube"
   "gradle"
-  "kubectl"
+  "kubectx"
 )
 
 install "brew install" "${brewArr[@]}"
