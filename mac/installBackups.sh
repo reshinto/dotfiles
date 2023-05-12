@@ -104,7 +104,7 @@ brewCaskArr=(
   "nvidia-geforce-now"
   "pgadmin4"
   "postman"
-  "spectacle"
+  "rectangle"
   "spotify"
   "sublime-text"
   "tor-browser"
