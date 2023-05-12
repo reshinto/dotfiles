@@ -73,6 +73,7 @@ brewArr=(
   "minikube"
   "gradle"
   "kubectx"
+  "docker"
 )
 
 install "brew install" "${brewArr[@]}"
@@ -98,7 +99,6 @@ brewCaskArr=(
   "avira-antivirus"
   "cheatsheet"
   "falcon-sql-client"
-  "docker"
   "kitematic"
   "github"
   "grammarly"
