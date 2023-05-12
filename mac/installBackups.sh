@@ -25,7 +25,6 @@ brewArr=(
   "zsh"
   "wget"
   "macvim"
-  "nvm"
   "node"
   "yarn"
   "http-server"
@@ -141,46 +140,6 @@ brewCaskArr=(
 
 install "brew install --cask" "${brewCaskArr[@]}"
 
-# install latest python version
-pyenv install $(pyenv install --list | grep -v - | grep -v b | tail -1)
-pyenv global $(pyenv install --list | grep -v - | grep -v b | tail -1)
-pyenv rehash
-
-# python3 packages
-pyArr=(
-  "tqdm"
-  "jedi"
-  "pillow"
-  "darksky_weather"
-)
-
-install "pip3 install" "${pyArr[@]}"
-
-# npm packages
-jsArr=(
-  "csslint"
-  "expo-cli"
-  "firebase-tools"
-  "fixjson"
-  "nodemon"
-  "prettier"
-  "tern"
-  "ttab"
-  "voices"
-  "mocha"
-  "chai"
-  "jasmine"
-  "serve"
-  "@cloudflare/wrangler"
-  "sql-cli"
-  "@angular/cli"
-  "typescript"
-  "ts-node"
-  "carbon-now-cli"
-)
-
-install "npm -g i" "${jsArr[@]}"
-
 # install oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
@@ -214,6 +173,51 @@ curl https://raw.githubusercontent.com/reshinto/dotfiles/master/.vim_runtime/my_
 curl https://cht.sh/:cht.sh | sudo tee /usr/local/bin/cht.sh
 sudo chmod +x /usr/local/bin/cht.sh
 
-# create nvm folder for node version management, then install latest version of node
-mkdir ~/.nvm
+# install latest python version
+pyenv install $(pyenv install --list | grep -v - | grep -v b | tail -1)
+pyenv global $(pyenv install --list | grep -v - | grep -v b | tail -1)
+pyenv rehash
+
+# add pyenv to path
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+
+# python3 packages
+pyArr=(
+  "tqdm"
+  "jedi"
+  "pillow"
+  "darksky_weather"
+)
+
+install "pip3 install" "${pyArr[@]}"
+
+# install nvm, then install latest version of node
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 nvm install node
+
+# npm packages
+jsArr=(
+  "csslint"
+  "expo-cli"
+  "firebase-tools"
+  "fixjson"
+  "nodemon"
+  "prettier"
+  "tern"
+  "ttab"
+  "voices"
+  "mocha"
+  "chai"
+  "jasmine"
+  "serve"
+  "@cloudflare/wrangler"
+  "sql-cli"
+  "@angular/cli"
+  "typescript"
+  "ts-node"
+  "carbon-now-cli"
+)
+
+install "npm -g i" "${jsArr[@]}"
