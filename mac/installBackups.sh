@@ -72,7 +72,6 @@ brewArr=(
   "minikube"
   "gradle"
   "kubectx"
-  "docker"
 )
 
 install "brew install" "${brewArr[@]}"
@@ -136,6 +135,7 @@ brewCaskArr=(
   "microsoft-teams"
   "macfuse"
   "telegram"
+  "docker"
 )
 
 install "brew install --cask" "${brewCaskArr[@]}"
