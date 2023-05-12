@@ -103,7 +103,6 @@ brewCaskArr=(
   "grammarly"
   "mongodb-compass-community"
   "nvidia-geforce-now"
-  "osxfuse"
   "pgadmin4"
   "postman"
   "spectacle"
@@ -136,6 +135,7 @@ brewCaskArr=(
   "visualvm"
   "zoom"
   "microsoft-teams"
+  "macfuse"
 )
 
 install "brew install --cask" "${brewCaskArr[@]}"
