@@ -136,6 +136,7 @@ brewCaskArr=(
   "zoom"
   "microsoft-teams"
   "macfuse"
+  "telegram"
 )
 
 install "brew install --cask" "${brewCaskArr[@]}"
