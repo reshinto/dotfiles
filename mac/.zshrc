@@ -322,6 +322,9 @@ alias dpython="docker run -it --rm -p 5001:5001 -v $(pwd):/app -w='/app' python 
 # docker java env
 alias djava="docker run -it --rm -p 5002:5002 -v $(pwd):/app -w='/app' openjdk bash"
 
+# icloud path
+alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/"
+
 # rbenv path
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
