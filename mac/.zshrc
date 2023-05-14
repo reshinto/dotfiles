@@ -314,13 +314,19 @@ alias delnode="find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"
 #alias sshcloud="ssh reshinto@cloud_ip_address"
 
 # docker node env
-alias dnode="docker run -it --rm -p 5000:5000 -v $(pwd):/app -w='/app' node bash"
+#alias dnode="docker run -it --rm -p 5000:5000 -v $(pwd):/app -w='/app' node bash"
+# docker node env, arg1: expose port, arg2: docker port, arg3: path
+function dnode() { docker run -it --rm -p $1:$2 -v $3:/app -w='/app' node bash }
 
 # docker python env
-alias dpython="docker run -it --rm -p 5001:5001 -v $(pwd):/app -w='/app' python bash"
+#alias dpython="docker run -it --rm -p 5001:5001 -v $(pwd):/app -w='/app' python bash"
+# docker python env, arg1: expose port, arg2: docker port, arg3: path
+function dpython() { docker run -it --rm -p $1:$2 -v $3:/app -w='/app' python bash }
 
 # docker java env
-alias djava="docker run -it --rm -p 5002:5002 -v $(pwd):/app -w='/app' openjdk bash"
+#alias djava="docker run -it --rm -p 5002:5002 -v $(pwd):/app -w='/app' openjdk bash"
+# docker java env, arg1: expose port, arg2: docker port, arg3: path
+function djava() { docker run -it --rm -p $1:$2 -v $3:/app -w='/app' openjdk bash }
 
 # icloud path
 alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/"
