@@ -7,6 +7,7 @@
 #
 # A quick little indicator for battery status on your Mac laptop, suitable for
 # display in your prompt.
+# copy this file to a location where the path is added, or add bin folder to path and paste this file inside
 
 battstat=$(pmset -g batt)
 time_left=$(echo $battstat |
