@@ -325,6 +325,12 @@ alias djava="docker run -it --rm -p 5002:5002 -v $(pwd):/app -w='/app' openjdk b
 # icloud path
 alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/"
 
+# check which app is using port
+function portcheck() { lsof -i :$@ }
+
+# kill port with PID
+alias killport="kill -9"
+
 # rbenv path
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
