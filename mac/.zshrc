@@ -32,7 +32,7 @@ export PATH="/opt/local/bin:$PATH"
 export PATH="/opt/local/sbin:$PATH"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/springfield/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -152,21 +152,21 @@ alias aur="brew cleanup && brew cleanup -s && conda clean -ay"
 # export JAVA_HOME="`/usr/libexec/java_home -v 10`"
 
 # email and password
-source /Users/springfield/Dropbox/share/.authentication.sh
+source $HOME/Dropbox/share/.authentication.sh
 
 # api keys
-source /Users/springfield/Dropbox/share/.apikeys.sh
+source $HOME/Dropbox/share/.apikeys.sh
 
 # tor
 alias tor="open -a 'tor browser'"
 
 # Dev shortcut
 alias sdev="cd /Volumes/Speed/dev"
-alias dev="cd /Users/springfield/dev"
+alias dev="cd $HOME/dev"
 
 # delete Spam emails
-alias dspam="python3 /Users/springfield/my_apps/delete-spam-automation/run.py"
-alias pspam="python3 /Users/springfield/my_apps/delete-spam-automation/run.py manual"
+alias dspam="python $HOME/my_apps/delete-spam-automation/run.py"
+alias pspam="python $HOME/my_apps/delete-spam-automation/run.py manual"
 
 # tensorflow conda env shortcut
 alias tf="source activate tf"
@@ -218,45 +218,45 @@ alias evim='emacs -nw'
 alias cppcompile='c++ -std=c++11 -stdlib=libc++'
 
 # alarm clock
-alias alarm="python3 /Users/springfield/my_apps/alarm-volume-control/run_app.py"
+alias alarm="python $HOME/my_apps/alarm-volume-control/run_app.py"
 
 # flask tutorial secret key and database
-source /Users/springfield/Dropbox/share/.flaskTutorialTemp.sh
+source $HOME/Dropbox/share/.flaskTutorialTemp.sh
 
 # rename file or folder names
-alias rename="python3 /Users/springfield/dev/Python_projects/My_Projects/Automation/rename_files/rename_files.py"
+alias rename="python $HOME/dev/Python_projects/My_Projects/Automation/rename_files/rename_files.py"
 
-#alias mongod='mongod --dbpath /Users/springfield/data/db'
+#alias mongod='mongod --dbpath $HOME/data/db'
 
 # webDev yelp-camp tutorial
 # export DATABASEURL="mongodb://localhost:27017/yelp_camp"
 
 # CLOUDINARY API NAME KEY AND SECRET
-source /Users/springfield/Dropbox/share/.CLOUDINARYAPI.sh
+source $HOME/Dropbox/share/.CLOUDINARYAPI.sh
 
 # github username
 export githubUser="reshinto"
 
 # python project default path
-export pyProject="/Users/springfield/dev/Python_projects/My_Projects/inDevelopment"
+export pyProject="$HOME/dev/Python_projects/My_Projects/inDevelopment"
 
 # web javascript project default path
-export webProject="/Users/springfield/dev/Web_projects/my_projects"
+export webProject="$HOME/dev/Web_projects/my_projects"
 
 # create new project automatically
-alias create="python3 /Users/springfield/my_apps/Automate_Building_projects/run.py"
+alias create="python $HOME/my_apps/Automate_Building_projects/run.py"
 
 # reindent file automatically
-alias re="python3 /Users/springfield/my_apps/Reindent/main.py"
+alias re="python $HOME/my_apps/Reindent/main.py"
 
 # run python server
-alias pserver="python3 -m http.server"
+alias pserver="python -m http.server"
 
 # run html server
 alias server="http-server"
 
 # Sudo Update All (include spam deletion)
-alias sua="sudo softwareupdate -i -a && brew update && brew upgrade && brew cleanup && brew cleanup -s && python3 /Users/springfield/my_apps/delete-spam-automation/run.py && npm update -g && pip3 install --upgrade pip && pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U --user && conda install anaconda -y && conda update --all -y && conda clean -ay"
+alias sua="sudo softwareupdate -i -a && brew update && brew upgrade && brew cleanup && brew cleanup -s && python3 $HOME/my_apps/delete-spam-automation/run.py && npm update -g && pip3 install --upgrade pip && pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U --user && conda install anaconda -y && conda update --all -y && conda clean -ay"
 
 # mySQL
 alias mysqlstart="brew services start mysql"
@@ -287,7 +287,7 @@ alias backup="/Volumes/backup"
 alias wifipw="wifi-password"
 
 # Play voice weather and time information
-alias sw="python3 /Users/springfield/my_apps/weather_app/weather.py"
+alias sw="python $HOME/my_apps/weather_app/weather.py"
 
 # Search for solutions with cheat.sh
 alias cs="cht.sh"
@@ -299,7 +299,7 @@ alias goo="googler"
 alias em="neomutt"
 
 # automate git clone, folder create, and cd
-alias clone="source ~/my_apps/clone.sh"
+alias clone="source $HOME/my_apps/clone.sh"
 
 # find current folder size
 alias sz="du -sh"
@@ -337,18 +337,30 @@ function portcheck() { lsof -i :$@ }
 # kill port with PID
 alias killport="kill -9"
 
+# Stop all docker containers
+alias dstop="docker kill $(docker ps -q)"
+
+# Remove all docker containers
+alias drm="docker rm $(docker ps -a -q)"
+
+# Remove all docker images
+alias drmi="docker rmi -f $(docker images -aq)"
+
+# Stop and remove all docker containers and images
+alias dclearall="dstop && drm && drmi"
+
 # rbenv path
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # Add .NET Core SDK tools
-export PATH="$PATH:/Users/springfield/.dotnet/tools"
+export PATH="$PATH:$HOME/.dotnet/tools"
 
 # Add Android SDK Location
-export ANDROID_SDK=/Users/springfield/Library/Android/sdk
+export ANDROID_SDK=$HOME/Library/Android/sdk
 
 # Add platform-tools
-export PATH=/Users/springfield/Library/Android/sdk/platform-tools:$PATH
+export PATH=$HOME/Library/Android/sdk/platform-tools:$PATH
 
 # Add java javajdk path
 # export PATH="/usr/local/opt/openjdk/bin:$PATH"
@@ -363,5 +375,5 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/springfield/.sdkman"
-[[ -s "/Users/springfield/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/springfield/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
