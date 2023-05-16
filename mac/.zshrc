@@ -337,17 +337,17 @@ function portcheck() { lsof -i :$@ }
 # kill port with PID
 alias killport="kill -9"
 
-# Stop all docker containers
-alias dstop="docker kill $(docker ps -q)"
+# Stop all docker containers (do not uncomment this when docker engine is not turned on)
+#alias dstop="docker kill $(docker ps -q)"
 
-# Remove all docker containers
-alias drm="docker rm $(docker ps -a -q)"
+# Remove all docker containers (do not uncomment this when docker engine is not turned on)
+#alias drm="docker rm $(docker ps -a -q)"
 
-# Remove all docker images
-alias drmi="docker rmi -f $(docker images -aq)"
+# Remove all docker images (do not uncomment this when docker engine is not turned on)
+#alias drmi="docker rmi -f $(docker images -aq)"
 
-# Stop and remove all docker containers and images
-alias dclearall="dstop && drm && drmi"
+# Stop and remove all docker containers and images (do not uncomment this when docker engine is not turned on)
+#alias dclearall="dstop && drm && drmi"
 
 # rbenv path
 export PATH="$HOME/.rbenv/bin:$PATH"
