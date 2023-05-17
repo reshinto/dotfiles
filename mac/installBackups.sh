@@ -73,6 +73,7 @@ brewArr=(
   "minikube"
   "gradle"
   "kubectx"
+  "grpcurl"
 )
 
 install "brew install" "${brewArr[@]}"
