@@ -22,6 +22,7 @@ xcode-select --install
 # brew packages
 brewArr=(
   "pyenv"
+  "pyenv-virtualenv"
   "zsh"
   "wget"
   "macvim"
