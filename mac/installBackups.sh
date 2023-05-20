@@ -138,6 +138,7 @@ brewCaskArr=(
   "macfuse"
   "telegram"
   "docker"
+  "microsoft-edge"
 )
 
 install "brew install --cask" "${brewCaskArr[@]}"
