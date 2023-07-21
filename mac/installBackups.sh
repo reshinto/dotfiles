@@ -139,6 +139,7 @@ brewCaskArr=(
   "telegram"
   "docker"
   "microsoft-edge"
+  "drawio"
 )
 
 install "brew install --cask" "${brewCaskArr[@]}"
