@@ -31,7 +31,7 @@ brewArr=(
   "http-server"
   "opencv"
   "mysql"
-  "postgresql"
+  "postgresql@15"
   "cmus"
   "tiny-html5"
   "neofetch"
