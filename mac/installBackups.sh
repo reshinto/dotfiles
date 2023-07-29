@@ -140,6 +140,8 @@ brewCaskArr=(
   "docker"
   "microsoft-edge"
   "drawio"
+  "google-cloud-sdk"
+  "lens"
 )
 
 install "brew install --cask" "${brewCaskArr[@]}"
