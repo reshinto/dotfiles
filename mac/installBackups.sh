@@ -142,6 +142,7 @@ brewCaskArr=(
   "drawio"
   "google-cloud-sdk"
   "lens"
+  "dbeaver-community"
 )
 
 install "brew install --cask" "${brewCaskArr[@]}"
