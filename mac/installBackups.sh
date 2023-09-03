@@ -74,6 +74,7 @@ brewArr=(
   "gradle"
   "kubectx"
   "grpcurl"
+  "velero"
 )
 
 install "brew install" "${brewArr[@]}"
