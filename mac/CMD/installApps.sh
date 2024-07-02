@@ -45,6 +45,7 @@ brewCaskArr=(
   "voov-meeting"
   "wechat"
   "grammarly-desktop"
+  "wpsoffice-cn"
 )
 
 install "brew install --cask" "${brewCaskArr[@]}"
