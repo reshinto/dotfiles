@@ -44,6 +44,7 @@ brewCaskArr=(
   "microsoft-edge"
   "voov-meeting"
   "wechat"
+  "grammarly-desktop"
 )
 
 install "brew install --cask" "${brewCaskArr[@]}"
