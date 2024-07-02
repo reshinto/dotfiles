@@ -45,6 +45,7 @@ brewCaskArr=(
   "telegram"
   "microsoft-edge"
   "voov-meeting"
+  "wechat"
 )
 
 install "brew install --cask" "${brewCaskArr[@]}"
