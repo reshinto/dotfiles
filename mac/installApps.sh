@@ -140,6 +140,7 @@ brewCaskArr=(
   "dbeaver-community"
   "voov-meeting"
   "wechat"
+  "chatgpt"
 )
 
 install "brew install --cask" "${brewCaskArr[@]}"
