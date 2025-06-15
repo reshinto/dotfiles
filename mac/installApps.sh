@@ -71,6 +71,7 @@ brewArr=(
   "kubectx"
   "grpcurl"
   "velero"
+  "blackhole-2ch"
 )
 
 install "brew install" "${brewArr[@]}"
