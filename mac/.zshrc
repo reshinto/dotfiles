@@ -186,6 +186,12 @@ function dpython() { docker run -it --rm -p $1:$2 -v $3:/app -w='/app' python ba
 # icloud path
 alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/"
 
+# icloud cv path
+alias cv="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/my_cv/examples"
+
+# icloud generate cv
+alias gencv="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/my_cv/examples && xelatex resume.tex"
+
 # check which app is using port
 function portcheck() { lsof -i :$@ }
 
