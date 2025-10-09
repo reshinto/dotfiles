@@ -72,6 +72,7 @@ brewArr=(
   "grpcurl"
   "velero"
   "blackhole-2ch"
+  "codex"
 )
 
 install "brew install" "${brewArr[@]}"
