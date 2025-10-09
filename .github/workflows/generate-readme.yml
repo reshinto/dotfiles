@@ -242,11 +242,11 @@ jobs:
           }
           
           MAX_FEATURES_PER_LANGUAGE = {
-              "Python": 8,
-              "Shell": 4,
+              "Python": 20,
+              "Shell": 8,
           }
-          
-          MAX_FEATURES_DEFAULT = 4
+
+          MAX_FEATURES_DEFAULT = 6
           
           ENTRY_POINT_HINTS = {
               ".py": "python {path}",
@@ -490,6 +490,8 @@ jobs:
                       if block:
                           break
                       continue
+                  if ext in {".sh", ".bash"} and stripped.startswith("#!"):
+                      continue
                   if ext in COMMENT_PREFIXES["hash"] and stripped.startswith("#"):
                       block.append(stripped.lstrip("# "))
                       continue
@@ -632,6 +634,9 @@ jobs:
           
           
           def detect_capabilities(text: str | None, path: Path, capability_counter: Counter) -> None:
+              if ".github/workflows" in path.as_posix():
+                  capability_counter["ci/cd automation"] += 1
+                  return
               if text is None:
                   return
               lower = text.lower()
@@ -641,8 +646,6 @@ jobs:
               name = path.name.lower()
               if name in {"dockerfile"} or name.endswith("dockerfile"):
                   capability_counter["containerisation"] += 1
-              if ".github/workflows" in path.as_posix():
-                  capability_counter["ci/cd automation"] += 1
           
           
           def detect_entry_points(path: Path, text: str | None, entries: list[str]) -> None:
@@ -745,22 +748,30 @@ jobs:
                   seen_entries.add(entry)
           
           
-          overview_sections = []
-          language_sentence = ", ".join(
-              f"{language} ({count} files)" for language, count in language_counter.most_common(4)
-          )
-          overview_sections.append(
-              f"The repository contains {language_sentence}, combining {len(files)} tracked files across application and documentation assets."
-          )
-          if capability_counter:
-              capability_line = ", ".join(desc for desc, _ in capability_counter.most_common(6))
+          overview_sections: list[str] = []
+          total_files = len(files)
+          if language_counter:
+              top_languages = [
+                  f"{language} ({count} files)" for language, count in language_counter.most_common(4)
+              ]
               overview_sections.append(
-                  f"Detected themes include {capability_line}, giving a quick sense of the problem domains the code addresses."
+                  f"This repository curates {total_files} tracked files spanning {join_human(top_languages)}."
               )
-          if topic_counter:
-              topic_line = ", ".join(label for label, _ in topic_counter.most_common(5))
+          else:
+              overview_sections.append(f"This repository curates {total_files} tracked files.")
+
+          if capability_counter:
+              capability_line = join_human(
+                  [desc for desc, _ in capability_counter.most_common(6)]
+              )
               overview_sections.append(
-                  f"Highlighted focus areas include {topic_line}."
+                  f"It showcases automation around {capability_line}."
+              )
+
+          if topic_counter:
+              topic_line = join_human([label for label, _ in topic_counter.most_common(5)])
+              overview_sections.append(
+                  f"Expect utilities for {topic_line}."
               )
           
           sorted_descriptions = sorted(
@@ -784,12 +795,12 @@ jobs:
               key=lambda lang: -language_counter.get(lang, 0)
           )
           feature_entries: list[str] = []
-          while len(feature_entries) < 12 and any(features_by_language.values()):
+          while len(feature_entries) < 32 and any(features_by_language.values()):
               for language in language_order:
                   queue = features_by_language.get(language)
                   if queue:
                       feature_entries.append(queue.pop(0))
-                  if len(feature_entries) >= 12:
+                  if len(feature_entries) >= 32:
                       break
           
           if not feature_entries:
