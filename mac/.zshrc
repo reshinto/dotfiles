@@ -192,6 +192,9 @@ alias cv="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/my_cv/exa
 # icloud generate cv
 alias gencv="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/my_cv/examples && xelatex resume.tex"
 
+# auto turn on AC
+alias onac="cd ~/dev/sensibo && ./run.sh"
+
 # check which app is using port
 function portcheck() { lsof -i :$@ }
 
