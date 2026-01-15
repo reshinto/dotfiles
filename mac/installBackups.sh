@@ -7,8 +7,10 @@ xcode-select --install
 # install brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-echo >> /Users/springfield/.zprofile
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/springfield/.zprofile
+ZPROFILE="$HOME/.zprofile"
+
+echo >> "$ZPROFILE"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> "$ZPROFILE"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # install oh my zsh
