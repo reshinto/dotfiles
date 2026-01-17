@@ -1,18 +1,6 @@
 #!/bin/sh
 # chmod a+x installApps.sh
 
-function install() {
-  # 1st arg, command value
-  cmd=$1
-  shift
-  # 2nd arg, array
-  arr=("$@")
-  for i in "${arr[@]}";
-  do
-    $cmd "$i"
-  done
-}
-
 # brew cask, this will keep prompting you to key in password
 # https://caskroom.github.io/search
 brewCaskArr=(
@@ -81,8 +69,6 @@ brewCaskArr=(
   "chatgpt"
 )
 
-install "brew install --cask" "${brewCaskArr[@]}"
-
 # brew packages
 brewArr=(
   "pyenv"
@@ -142,6 +128,50 @@ brewArr=(
   "codex"
 )
 
+# python3 packages
+pyArr=(
+  "tqdm"
+  "jedi"
+  "pillow"
+  "darksky_weather"
+)
+
+# npm packages
+jsArr=(
+  "csslint"
+  "expo-cli"
+  "firebase-tools"
+  "fixjson"
+  "nodemon"
+  "prettier"
+  "tern"
+  "ttab"
+  "voices"
+  "mocha"
+  "chai"
+  "jasmine"
+  "serve"
+  "@cloudflare/wrangler"
+  "sql-cli"
+  "typescript"
+  "ts-node"
+  "carbon-now-cli"
+)
+
+function install() {
+  # 1st arg, command value
+  cmd=$1
+  shift
+  # 2nd arg, array
+  arr=("$@")
+  for i in "${arr[@]}";
+  do
+    $cmd "$i"
+  done
+}
+
+install "brew install --cask" "${brewCaskArr[@]}"
+
 install "brew install" "${brewArr[@]}"
 
 # install git clones, cloning alone works with install(), but pushing to directory doesn't
@@ -188,37 +218,7 @@ pyenv install $(pyenv install --list | grep -v - | grep -v b | tail -1)
 pyenv global $(pyenv install --list | grep -v - | grep -v b | tail -1)
 pyenv rehash
 
-# python3 packages
-pyArr=(
-  "tqdm"
-  "jedi"
-  "pillow"
-  "darksky_weather"
-)
-
 install "pip3 install" "${pyArr[@]}"
-
-# npm packages
-jsArr=(
-  "csslint"
-  "expo-cli"
-  "firebase-tools"
-  "fixjson"
-  "nodemon"
-  "prettier"
-  "tern"
-  "ttab"
-  "voices"
-  "mocha"
-  "chai"
-  "jasmine"
-  "serve"
-  "@cloudflare/wrangler"
-  "sql-cli"
-  "typescript"
-  "ts-node"
-  "carbon-now-cli"
-)
 
 install "npm -g i" "${jsArr[@]}"
 
