@@ -229,7 +229,7 @@ nvm use default
 install "npm -g i" "${jsArr[@]}"
 
 ###########################################################
-# Setup ssh key only if missing
+# Setup ssh key only if missing, you will be prompted to key in the password you want to use
 if [ ! -f "$HOME/.ssh/id_ed25519" ]; then
   ssh-keygen -t ed25519 -f "$HOME/.ssh/id_ed25519" -N ""
 fi
