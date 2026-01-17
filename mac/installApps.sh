@@ -13,71 +13,7 @@ function install() {
   done
 }
 
-echo export PATH=$PATH:/opt/homebrew/bin >> .zshrc
-source ~/.zshrc
-
-# brew packages
-brewArr=(
-  "pyenv"
-  "pyenv-virtualenv"
-  "wget"
-  "macvim"
-  "node"
-  "yarn"
-  "http-server"
-  "opencv"
-  "mysql"
-  "postgresql@15"
-  "cmus"
-  "tiny-html5"
-  "neofetch"
-  "mps-youtube"
-  "heroku/brew/heroku"
-  "chrome-cli"
-  "darksky-weather"
-  "docker"
-  "ffmpeg"
-  "googler"
-  "ranger"
-  "htop"
-  "speedtest-cli"
-  "td"
-  "tmux"
-  "watchman"
-  "wifi-password"
-  "autopep8"
-  "httpie"
-  "mongodb"
-  "rlwrap"
-  "fzf"
-  "neomutt"
-  "nasm"
-  "mono"
-  "vifm"
-  "pipenv"
-  "java"
-  "jenkins-lts"
-  "groovy"
-  "intellij-idea-ce"
-  "nginx"
-  "redis"
-  "springboot"
-  "maven"
-  "jenv"
-  "kotlin"
-  "MinGW-w64"
-  "minikube"
-  "gradle"
-  "kubectx"
-  "grpcurl"
-  "velero"
-  "blackhole-2ch"
-  "codex"
-)
-
-install "brew install" "${brewArr[@]}"
-
-# brew cask
+# brew cask, this will keep prompting you to key in password
 # https://caskroom.github.io/search
 brewCaskArr=(
   "iterm2"
@@ -147,29 +83,96 @@ brewCaskArr=(
 
 install "brew install --cask" "${brewCaskArr[@]}"
 
-# install oh my zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# brew packages
+brewArr=(
+  "pyenv"
+  "pyenv-virtualenv"
+  "wget"
+  "macvim"
+  "nvm"
+  "yarn"
+  "http-server"
+  "opencv"
+  "mysql"
+  "postgresql@15"
+  "cmus"
+  "tiny-html5"
+  "neofetch"
+  "mps-youtube"
+  "heroku/brew/heroku"
+  "chrome-cli"
+  "darksky-weather"
+  "docker"
+  "ffmpeg"
+  "googler"
+  "ranger"
+  "htop"
+  "speedtest-cli"
+  "td"
+  "tmux"
+  "watchman"
+  "wifi-password"
+  "autopep8"
+  "httpie"
+  "mongodb"
+  "rlwrap"
+  "fzf"
+  "neomutt"
+  "nasm"
+  "mono"
+  "vifm"
+  "pipenv"
+  "java"
+  "jenkins-lts"
+  "groovy"
+  "intellij-idea-ce"
+  "nginx"
+  "redis"
+  "springboot"
+  "maven"
+  "jenv"
+  "kotlin"
+  "MinGW-w64"
+  "minikube"
+  "gradle"
+  "kubectx"
+  "grpcurl"
+  "velero"
+  "blackhole-2ch"
+  "codex"
+)
+
+install "brew install" "${brewArr[@]}"
 
 # install git clones, cloning alone works with install(), but pushing to directory doesn't
 # zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
 # zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-# amix vimrc
+
+# amix vimrc, allow vim configurations
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
+
 # emmet-vim
 git clone https://github.com/mattn/emmet-vim.git ~/.vim_runtime/my_plugins/emmet-vim
+
 # molokai
 git clone https://github.com/tomasr/molokai.git ~/.vim_runtime/my_plugins/molokai
+
 # vim-javascript
 git clone https://github.com/pangloss/vim-javascript.git ~/.vim_runtime/my_plugins/vim-javascript
+
 # vim-jsdoc
 git clone https://github.com/heavenshell/vim-jsdoc.git ~/.vim_runtime/my_plugins/vim-jsdoc
+
 # vim-jsx
 git clone https://github.com/mxw/vim-jsx.git ~/.vim_runtime/my_plugins/vim-jsx
+
 # omnisharp-vim
 git clone https://github.com/OmniSharp/omnisharp-vim.git ~/.vim_runtime/my_plugins/omnisharp-vim
+
 # YouCompleteMe
 git clone --recursive https://github.com/ycm-core/YouCompleteMe.git ~/.vim_runtime/my_plugins/YouCompleteMe
 python3 ~/.vim_runtime/my_plugins/YouCompleteMe/install.py --all
@@ -185,11 +188,6 @@ pyenv install $(pyenv install --list | grep -v - | grep -v b | tail -1)
 pyenv global $(pyenv install --list | grep -v - | grep -v b | tail -1)
 pyenv rehash
 
-# add pyenv to path
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
-echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
-echo 'eval "$(pyenv init -)"' >> ~/.zshrc
-
 # python3 packages
 pyArr=(
   "tqdm"
@@ -199,10 +197,6 @@ pyArr=(
 )
 
 install "pip3 install" "${pyArr[@]}"
-
-# install nvm, then install latest version of node
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-nvm install node
 
 # npm packages
 jsArr=(
@@ -227,3 +221,11 @@ jsArr=(
 )
 
 install "npm -g i" "${jsArr[@]}"
+
+# Use nvm to install the latest Node.js and use it
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix)/opt/nvm/nvm.sh"
+nvm install --lts
+
+nvm alias default node
+nvm use default
