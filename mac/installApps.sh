@@ -67,6 +67,10 @@ brewCaskArr=(
   "voov-meeting"
   "wechat"
   "chatgpt"
+  "claude-code"
+  "claude"
+  "codex"
+  "antigravity"
 )
 
 # brew packages
