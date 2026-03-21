@@ -130,5 +130,8 @@ tsconfig.json
 # Editors
 .vscode/
 
+# LLMs
+.claude/
+
 # misc
 .DS_Store
