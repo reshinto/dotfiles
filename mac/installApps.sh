@@ -129,7 +129,7 @@ brewArr=(
   "grpcurl"
   "velero"
   "blackhole-2ch"
-  "codex"
+  "gh"
 )
 
 # python3 packages
