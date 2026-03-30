@@ -130,6 +130,7 @@ brewArr=(
   "velero"
   "blackhole-2ch"
   "gh"
+  "jq"
 )
 
 # python3 packages
