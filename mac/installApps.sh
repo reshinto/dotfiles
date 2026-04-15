@@ -71,6 +71,7 @@ brewCaskArr=(
   "claude"
   "codex"
   "antigravity"
+  "obsidian"
 )
 
 # brew packages
