@@ -131,6 +131,7 @@ brewArr=(
   "blackhole-2ch"
   "gh"
   "jq"
+  "pipx"
 )
 
 # python3 packages
