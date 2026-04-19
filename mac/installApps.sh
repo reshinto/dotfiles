@@ -134,6 +134,7 @@ brewArr=(
   "jq"
   "pipx"
   "gemini-cli"
+  "codex"
 )
 
 # python3 packages
