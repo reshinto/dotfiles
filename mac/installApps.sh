@@ -133,6 +133,7 @@ brewArr=(
   "gh"
   "jq"
   "pipx"
+  "gemini-cli"
 )
 
 # python3 packages
