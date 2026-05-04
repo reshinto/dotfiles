@@ -135,6 +135,7 @@ brewArr=(
   "pipx"
   "gemini-cli"
   "codex"
+  "ripgrep"
 )
 
 # python3 packages
